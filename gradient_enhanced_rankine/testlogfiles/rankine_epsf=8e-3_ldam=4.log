@@ -1,0 +1,4675 @@
+
+
+Framework Information:
+MOOSE Version:           git commit ce49bda782 on 2020-11-06
+LibMesh Version:         4f3fa5a6a2104ab8784a6519677589738b9aef6f
+PETSc Version:           3.13.3
+SLEPc Version:           3.13.3
+Current Time:            Sat Nov 14 12:47:14 2020
+Executable Timestamp:    Wed Nov 11 13:36:28 2020
+
+Parallelism:
+  Num Processors:          18
+  Num Threads:             1
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          3
+  Spatial Dimension:       3
+  Nodes:                   
+    Total:                 24306
+    Local:                 1484
+  Elems:                   
+    Total:                 3434
+    Local:                 188
+  Num Subdomains:          2
+  Num Partitions:          18
+  Partitioner:             metis
+
+Nonlinear System:
+  Num DOFs:                97224
+  Num Local DOFs:          5936
+  Variables:               { "disp_x" "disp_y" "disp_z" "nonlocal_damage" } 
+  Finite Element Types:    "LAGRANGE" 
+  Approximation Orders:    "SECOND" 
+
+Auxiliary System:
+  Num DOFs:                79786
+  Num Local DOFs:          4828
+  Variables:               { "von_mises" "stress_first_invariant" } { "force_x" "force_y" "force_z" } 
+  Finite Element Types:    "MONOMIAL" "LAGRANGE" 
+  Approximation Orders:    "CONSTANT" "SECOND" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             IterationAdaptiveDT
+  Solver Mode:             NEWTON
+  MOOSE Preconditioner:    SMP
+
+[31mLEGACY MODES ENABLED:[39m
+ This application uses the legacy material output option: material properties are output only on TIMESTEP_END, not INITIAL. To remove this message, set 'use_legacy_material_output' to false in this application. If there are gold output files that contain material property output for which output occurs on INITIAL, then these will generate diffs due to zero values being stored, and these tests should be re-golded.
+[39m
+
+Time Step 0, time = 0
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
++----------------+----------------+
+
+
+Time Step 1, time = 0.01, dt = 0.01
+  Skipping predictor this step
+ 0 Nonlinear |R| = [32m4.613567e+03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 1 Nonlinear |R| = [32m3.520814e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 2 Nonlinear |R| = [32m2.758814e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 3 Nonlinear |R| = [32m2.225787e-06[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 3
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.583632e-06[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
++----------------+----------------+
+
+
+Time Step 2, time = 0.02, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m4.248219e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 1 Nonlinear |R| = [32m2.200233e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 2 Nonlinear |R| = [32m2.132912e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 3 Nonlinear |R| = [32m1.662559e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
++----------------+----------------+
+
+
+Time Step 3, time = 0.03, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.444314e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 1 Nonlinear |R| = [32m1.869231e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m5.791097e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 3 Nonlinear |R| = [32m5.910063e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 4 Nonlinear |R| = [32m4.879391e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 5 Nonlinear |R| = [32m4.604644e-10[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m3.654516e-10[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
++----------------+----------------+
+
+
+Time Step 4, time = 0.04, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.449805e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 1 Nonlinear |R| = [32m3.835770e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [33m3.743811e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 3 Nonlinear |R| = [32m2.920191e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 4 Nonlinear |R| = [32m6.520264e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 5 Nonlinear |R| = [32m5.242823e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 6 Nonlinear |R| = [32m4.609676e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
++----------------+----------------+
+
+
+Time Step 5, time = 0.05, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.733931e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 1 Nonlinear |R| = [31m5.728034e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m1.849052e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 3 Nonlinear |R| = [32m1.192977e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 4 Nonlinear |R| = [32m7.131567e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 5 Nonlinear |R| = [32m6.886577e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 6 Nonlinear |R| = [32m5.827951e-10[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m4.328713e-10[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
++----------------+----------------+
+
+
+Time Step 6, time = 0.06, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.833492e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 1 Nonlinear |R| = [31m2.566322e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m5.022365e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 3 Nonlinear |R| = [32m3.774854e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 4 Nonlinear |R| = [32m5.096734e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 5 Nonlinear |R| = [32m4.326653e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 6 Nonlinear |R| = [32m3.406887e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.513131e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
++----------------+----------------+
+
+
+Time Step 7, time = 0.07, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.956706e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 1 Nonlinear |R| = [31m3.962564e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 11
+ 2 Nonlinear |R| = [32m1.851647e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 3 Nonlinear |R| = [32m1.506998e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 4 Nonlinear |R| = [32m6.410944e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 5 Nonlinear |R| = [32m4.360356e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 6 Nonlinear |R| = [32m4.268801e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 7 Nonlinear |R| = [32m3.936249e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m2.859751e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
++----------------+----------------+
+
+
+Time Step 8, time = 0.08, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.985570e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 1 Nonlinear |R| = [31m3.975190e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m1.124928e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 3 Nonlinear |R| = [32m1.363931e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 4 Nonlinear |R| = [32m1.538135e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 5 Nonlinear |R| = [32m3.840965e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 6 Nonlinear |R| = [32m3.591779e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 7 Nonlinear |R| = [32m4.400594e-10[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
++----------------+----------------+
+
+
+Time Step 9, time = 0.09, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.999122e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 1 Nonlinear |R| = [31m4.433147e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m9.739588e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 3 Nonlinear |R| = [32m1.267549e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 4 Nonlinear |R| = [32m1.754861e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 5 Nonlinear |R| = [32m1.105503e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 6 Nonlinear |R| = [32m1.694001e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 7 Nonlinear |R| = [32m4.568931e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 8 Nonlinear |R| = [32m5.204510e-10[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
++----------------+----------------+
+
+
+Time Step 10, time = 0.1, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.184438e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 1 Nonlinear |R| = [31m5.270266e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m2.656793e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 3 Nonlinear |R| = [32m4.054667e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 4 Nonlinear |R| = [32m4.756186e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 5 Nonlinear |R| = [32m4.368370e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 6 Nonlinear |R| = [32m8.630562e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 7 Nonlinear |R| = [32m7.250374e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m5.437217e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
++----------------+----------------+
+
+
+Time Step 11, time = 0.11, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.343038e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 1 Nonlinear |R| = [31m4.561439e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 2 Nonlinear |R| = [32m1.805488e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 3 Nonlinear |R| = [32m4.982568e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 4 Nonlinear |R| = [32m8.196280e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 5 Nonlinear |R| = [32m8.726849e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 6 Nonlinear |R| = [32m1.011023e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 7 Nonlinear |R| = [32m7.879574e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m5.656149e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
++----------------+----------------+
+
+
+Time Step 12, time = 0.12, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.562343e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 1 Nonlinear |R| = [31m4.487022e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 2 Nonlinear |R| = [32m3.035699e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 8
+ 3 Nonlinear |R| = [32m1.759459e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 4 Nonlinear |R| = [32m6.208659e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 5 Nonlinear |R| = [32m5.413532e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 6 Nonlinear |R| = [32m1.755119e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 7 Nonlinear |R| = [32m9.995954e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 8 Nonlinear |R| = [32m1.019607e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 9 Nonlinear |R| = [32m8.919345e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 9
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
++----------------+----------------+
+
+
+Time Step 13, time = 0.13, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.438218e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 1 Nonlinear |R| = [31m4.905414e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m2.145605e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 3 Nonlinear |R| = [32m2.990533e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 4 Nonlinear |R| = [32m5.156569e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 5 Nonlinear |R| = [32m2.121334e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 6 Nonlinear |R| = [31m3.240521e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 7 Nonlinear |R| = [32m2.664388e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 8 Nonlinear |R| = [32m8.505094e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 9 Nonlinear |R| = [32m8.024625e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 9
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
++----------------+----------------+
+
+
+Time Step 14, time = 0.14, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.394253e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 1 Nonlinear |R| = [31m5.767074e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 11
+ 2 Nonlinear |R| = [32m2.540028e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 3 Nonlinear |R| = [32m1.301798e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 4 Nonlinear |R| = [32m2.144399e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 5 Nonlinear |R| = [32m1.555305e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 6 Nonlinear |R| = [32m6.268800e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 7 Nonlinear |R| = [32m1.073313e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 8 Nonlinear |R| = [32m8.773439e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 9 Nonlinear |R| = [32m8.706668e-10[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 9
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m6.502110e-10[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
++----------------+----------------+
+
+
+Time Step 15, time = 0.15, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.480298e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 1 Nonlinear |R| = [31m4.235429e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m1.207949e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 3 Nonlinear |R| = [32m5.947978e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 4 Nonlinear |R| = [32m8.127679e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 5 Nonlinear |R| = [32m9.274570e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 6 Nonlinear |R| = [32m8.897966e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ 7 Nonlinear |R| = [32m7.335675e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m5.296501e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   1.000000e-02 |  -5.639396e+01 |
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
++----------------+----------------+
+
+
+Time Step 16, time = 0.16, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.623748e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 1 Nonlinear |R| = [31m3.894100e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 2 Nonlinear |R| = [32m7.975967e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 3 Nonlinear |R| = [32m7.218556e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 4 Nonlinear |R| = [32m6.144160e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 5 Nonlinear |R| = [32m3.388777e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 6 Nonlinear |R| = [32m3.208310e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ 7 Nonlinear |R| = [32m6.217492e-10[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m4.464930e-10[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.000000e-02 |  -1.127814e+02 |
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
++----------------+----------------+
+
+
+Time Step 17, time = 0.17, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.952472e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 1 Nonlinear |R| = [31m5.168648e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [32m9.374440e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 3 Nonlinear |R| = [32m1.115564e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 4 Nonlinear |R| = [32m9.885513e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 35
+ 5 Nonlinear |R| = [32m2.829711e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 6 Nonlinear |R| = [32m1.439003e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 7 Nonlinear |R| = [32m1.333723e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 44
+ 8 Nonlinear |R| = [32m1.420621e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.032331e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.000000e-02 |  -1.688913e+02 |
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
++----------------+----------------+
+
+
+Time Step 18, time = 0.18, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.064010e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 1 Nonlinear |R| = [31m2.825324e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 2 Nonlinear |R| = [32m1.137254e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 3 Nonlinear |R| = [32m9.009350e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 4 Nonlinear |R| = [32m1.156083e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 5 Nonlinear |R| = [32m7.492543e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 6 Nonlinear |R| = [32m2.776111e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 7 Nonlinear |R| = [32m2.406605e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 39
+ 8 Nonlinear |R| = [32m2.432067e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.827258e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   4.000000e-02 |  -2.246502e+02 |
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
++----------------+----------------+
+
+
+Time Step 19, time = 0.19, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.279098e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [31m4.391112e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m9.237836e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 3 Nonlinear |R| = [32m2.276604e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 4 Nonlinear |R| = [32m6.171910e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 5 Nonlinear |R| = [32m2.432833e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 6 Nonlinear |R| = [32m3.451531e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 7 Nonlinear |R| = [32m3.336944e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 8 Nonlinear |R| = [32m3.313338e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ 9 Nonlinear |R| = [32m6.848192e-10[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 9
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   5.000000e-02 |  -2.798072e+02 |
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
++----------------+----------------+
+
+
+Time Step 20, time = 0.2, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.397093e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 1 Nonlinear |R| = [31m9.869256e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m1.010922e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 3 Nonlinear |R| = [32m1.469433e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 4 Nonlinear |R| = [31m5.493134e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 5 Nonlinear |R| = [32m1.524138e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 6 Nonlinear |R| = [32m4.831977e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 37
+ 7 Nonlinear |R| = [32m4.599767e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 8 Nonlinear |R| = [32m7.636258e-10[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   6.000000e-02 |  -3.341483e+02 |
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
++----------------+----------------+
+
+
+Time Step 21, time = 0.21, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.927950e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 1 Nonlinear |R| = [31m6.134988e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m9.424147e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 3 Nonlinear |R| = [32m2.209517e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 4 Nonlinear |R| = [32m6.945418e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 5 Nonlinear |R| = [32m4.233775e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 6 Nonlinear |R| = [32m8.412785e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 7 Nonlinear |R| = [32m8.066078e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ 8 Nonlinear |R| = [32m9.979999e-10[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m7.223754e-10[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   7.000000e-02 |  -3.874270e+02 |
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
++----------------+----------------+
+
+
+Time Step 22, time = 0.22, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.075324e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 1 Nonlinear |R| = [31m7.039846e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 2 Nonlinear |R| = [32m8.648469e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 3 Nonlinear |R| = [32m1.082028e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 4 Nonlinear |R| = [31m1.978995e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 5 Nonlinear |R| = [32m1.488529e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 6 Nonlinear |R| = [32m1.266057e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 7 Nonlinear |R| = [32m1.098194e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 8 Nonlinear |R| = [32m1.151173e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m8.824327e-10[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   8.000000e-02 |  -4.393845e+02 |
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
++----------------+----------------+
+
+
+Time Step 23, time = 0.23, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.996058e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 1 Nonlinear |R| = [31m3.655440e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m6.656135e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 3 Nonlinear |R| = [32m7.164311e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 4 Nonlinear |R| = [32m1.178086e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 5 Nonlinear |R| = [32m2.828007e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 6 Nonlinear |R| = [32m2.415562e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 7 Nonlinear |R| = [32m2.173433e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.708783e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   9.000000e-02 |  -4.897921e+02 |
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
++----------------+----------------+
+
+
+Time Step 24, time = 0.24, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.997016e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 1 Nonlinear |R| = [31m5.163973e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 2 Nonlinear |R| = [32m6.514075e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 3 Nonlinear |R| = [32m8.171110e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 4 Nonlinear |R| = [31m5.457917e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 5 Nonlinear |R| = [32m1.311104e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 6 Nonlinear |R| = [32m4.639829e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 7 Nonlinear |R| = [32m8.087636e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 8 Nonlinear |R| = [32m7.644348e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m6.394811e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   1.000000e-01 |  -5.383984e+02 |
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
++----------------+----------------+
+
+
+Time Step 25, time = 0.25, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.216795e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [33m3.211773e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m4.465536e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 3 Nonlinear |R| = [32m2.901346e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 4 Nonlinear |R| = [32m7.238794e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 5 Nonlinear |R| = [32m1.322312e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 6 Nonlinear |R| = [32m1.087715e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 7 Nonlinear |R| = [32m8.812381e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 7
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   1.100000e-01 |  -5.849511e+02 |
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
++----------------+----------------+
+
+
+Time Step 26, time = 0.26, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.311276e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [32m2.712164e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [32m4.687768e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 3 Nonlinear |R| = [32m1.241685e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 4 Nonlinear |R| = [32m4.189972e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 5 Nonlinear |R| = [32m3.489045e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 6 Nonlinear |R| = [32m1.222028e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 7 Nonlinear |R| = [32m1.176616e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m9.845943e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   1.200000e-01 |  -6.291927e+02 |
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
++----------------+----------------+
+
+
+Time Step 27, time = 0.27, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.324024e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 1 Nonlinear |R| = [31m5.710193e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 2 Nonlinear |R| = [32m7.485954e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 3 Nonlinear |R| = [32m1.122702e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 64
+ 4 Nonlinear |R| = [31m2.804202e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 5 Nonlinear |R| = [32m2.575159e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 51
+ 6 Nonlinear |R| = [31m2.051994e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 7 Nonlinear |R| = [32m5.329837e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 8 Nonlinear |R| = [32m6.383420e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 9 Nonlinear |R| = [31m1.146399e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+10 Nonlinear |R| = [31m1.326468e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+11 Nonlinear |R| = [31m4.908635e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+12 Nonlinear |R| = [32m3.596548e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 45
+13 Nonlinear |R| = [31m2.307564e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 45
+14 Nonlinear |R| = [31m1.397081e+03[39m
+Nonlinear solve did not converge due to DIVERGED_DTOL iterations 14
+[31m Solve Did NOT Converge![39m
+Aborting as solve did not converge
+
+Solve failed, cutting timestep.
+
+Time Step 27, time = 0.267, dt = 0.007
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.404793e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 1 Nonlinear |R| = [32m1.696837e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m3.042880e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 3 Nonlinear |R| = [32m5.141401e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 4 Nonlinear |R| = [32m9.627758e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 5 Nonlinear |R| = [32m6.924867e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 6 Nonlinear |R| = [32m2.461646e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 51
+ 7 Nonlinear |R| = [32m2.369429e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.903605e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   1.300000e-01 |  -6.709495e+02 |
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
++----------------+----------------+
+
+
+Time Step 28, time = 0.274, dt = 0.007
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.420724e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 1 Nonlinear |R| = [31m5.606726e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 2 Nonlinear |R| = [32m1.629358e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 3 Nonlinear |R| = [32m1.843235e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 4 Nonlinear |R| = [32m5.207681e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 5 Nonlinear |R| = [32m9.575119e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 52
+ 6 Nonlinear |R| = [33m9.473639e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 54
+ 7 Nonlinear |R| = [32m8.212656e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 38
+ 8 Nonlinear |R| = [32m4.331360e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 59
+ 9 Nonlinear |R| = [32m6.331582e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 63
+10 Nonlinear |R| = [32m7.350981e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 10
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m5.990100e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   1.400000e-01 |  -7.100496e+02 |
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
++----------------+----------------+
+
+
+Time Step 29, time = 0.2831, dt = 0.0091
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.131215e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 63
+ 1 Nonlinear |R| = [31m5.019125e+03[39m
+Nonlinear solve did not converge due to DIVERGED_DTOL iterations 1
+[31m Solve Did NOT Converge![39m
+Aborting as solve did not converge
+
+Solve failed, cutting timestep.
+
+Time Step 29, time = 0.28037, dt = 0.00637
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m6.784085e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 1 Nonlinear |R| = [32m1.362383e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [32m5.746011e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 3 Nonlinear |R| = [32m2.127780e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 55
+ 4 Nonlinear |R| = [31m7.643669e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 5 Nonlinear |R| = [32m2.673239e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 6 Nonlinear |R| = [31m1.220054e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 7 Nonlinear |R| = [32m4.523716e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 8 Nonlinear |R| = [32m1.681876e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 9 Nonlinear |R| = [31m5.066641e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+10 Nonlinear |R| = [32m3.783407e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 35
+11 Nonlinear |R| = [32m1.357687e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 56
+12 Nonlinear |R| = [32m1.727690e-06[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 12
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.450578e-06[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   1.500000e-01 |  -7.463435e+02 |
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
++----------------+----------------+
+
+
+Time Step 30, time = 0.28674, dt = 0.00637
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.227185e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 39
+ 1 Nonlinear |R| = [31m2.902609e+02[39m
+Nonlinear solve did not converge due to DIVERGED_DTOL iterations 1
+[31m Solve Did NOT Converge![39m
+Aborting as solve did not converge
+
+Solve failed, cutting timestep.
+
+Time Step 30, time = 0.284829, dt = 0.004459
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.550863e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 1 Nonlinear |R| = [31m7.444183e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m4.736460e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 3 Nonlinear |R| = [32m1.518377e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 4 Nonlinear |R| = [32m1.196141e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 35
+ 5 Nonlinear |R| = [31m3.255492e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 6 Nonlinear |R| = [32m4.098950e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 7 Nonlinear |R| = [32m2.227797e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 8 Nonlinear |R| = [32m2.772645e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 37
+ 9 Nonlinear |R| = [32m2.659006e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 48
+10 Nonlinear |R| = [32m9.223105e-10[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 10
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m6.734414e-10[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   1.600000e-01 |  -7.795741e+02 |
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
++----------------+----------------+
+
+
+Time Step 31, time = 0.289288, dt = 0.004459
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.570409e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 1 Nonlinear |R| = [31m3.825963e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m1.850496e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 3 Nonlinear |R| = [32m2.540917e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 4 Nonlinear |R| = [32m5.694631e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 5 Nonlinear |R| = [32m1.767845e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 6 Nonlinear |R| = [32m3.083494e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 7 Nonlinear |R| = [32m2.805705e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 8 Nonlinear |R| = [32m2.824813e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m2.009618e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   1.700000e-01 |  -8.095186e+02 |
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
++----------------+----------------+
+
+
+Time Step 32, time = 0.295085, dt = 0.0057967
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.101024e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 1 Nonlinear |R| = [31m2.464114e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m3.633728e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 3 Nonlinear |R| = [32m3.343235e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 4 Nonlinear |R| = [32m1.280794e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 5 Nonlinear |R| = [32m3.862584e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ 6 Nonlinear |R| = [32m1.796060e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 39
+ 7 Nonlinear |R| = [32m1.693635e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.281572e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   1.800000e-01 |  -8.361280e+02 |
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
++----------------+----------------+
+
+
+Time Step 33, time = 0.30262, dt = 0.00753571
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.774539e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 1 Nonlinear |R| = [31m5.311061e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m5.507935e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 3 Nonlinear |R| = [32m8.363153e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 4 Nonlinear |R| = [32m5.534031e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 30
+ 5 Nonlinear |R| = [32m9.905636e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 6 Nonlinear |R| = [32m1.106223e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 7 Nonlinear |R| = [32m9.412820e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   1.900000e-01 |  -8.593967e+02 |
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
++----------------+----------------+
+
+
+Time Step 34, time = 0.312417, dt = 0.00979642
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.552302e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 1 Nonlinear |R| = [31m2.367036e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 2 Nonlinear |R| = [32m9.076693e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 3 Nonlinear |R| = [31m1.950704e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 4 Nonlinear |R| = [32m1.868204e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 5 Nonlinear |R| = [32m6.813292e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 37
+ 6 Nonlinear |R| = [32m4.811998e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 7 Nonlinear |R| = [32m3.320606e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 35
+ 8 Nonlinear |R| = [32m8.518354e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 50
+ 9 Nonlinear |R| = [32m7.888510e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 9
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m6.573845e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.000000e-01 |  -8.793799e+02 |
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
++----------------+----------------+
+
+
+Time Step 35, time = 0.322417, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.606291e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 1 Nonlinear |R| = [31m5.928413e+02[39m
+Nonlinear solve did not converge due to DIVERGED_DTOL iterations 1
+[31m Solve Did NOT Converge![39m
+Aborting as solve did not converge
+
+Solve failed, cutting timestep.
+
+Time Step 35, time = 0.319417, dt = 0.007
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m7.064740e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 1 Nonlinear |R| = [31m1.812323e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [32m8.642157e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 3 Nonlinear |R| = [32m6.525897e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 4 Nonlinear |R| = [32m9.431905e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 5 Nonlinear |R| = [32m4.062492e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 6 Nonlinear |R| = [32m1.809326e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 7 Nonlinear |R| = [32m1.909188e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 50
+ 8 Nonlinear |R| = [32m1.777453e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 8
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.355303e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.100000e-01 |  -8.961927e+02 |
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
++----------------+----------------+
+
+
+Time Step 36, time = 0.326417, dt = 0.007
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.734454e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 1 Nonlinear |R| = [31m9.187116e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m7.100240e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 3 Nonlinear |R| = [32m9.469889e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 4 Nonlinear |R| = [32m1.046499e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 5 Nonlinear |R| = [32m4.232854e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 6 Nonlinear |R| = [32m4.500708e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 50
+ 7 Nonlinear |R| = [32m4.391490e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m3.353162e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.200000e-01 |  -9.096110e+02 |
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
++----------------+----------------+
+
+
+Time Step 37, time = 0.335517, dt = 0.0091
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.548564e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 1 Nonlinear |R| = [31m1.106256e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m5.953837e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 3 Nonlinear |R| = [32m1.208745e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 4 Nonlinear |R| = [32m1.401918e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 5 Nonlinear |R| = [32m2.408389e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 6 Nonlinear |R| = [32m1.253469e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ 7 Nonlinear |R| = [32m1.159166e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m8.390960e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.300000e-01 |  -9.198216e+02 |
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
++----------------+----------------+
+
+
+Time Step 38, time = 0.345517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.791368e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 1 Nonlinear |R| = [31m1.366313e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [32m9.206066e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 3 Nonlinear |R| = [32m1.100165e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ 4 Nonlinear |R| = [32m9.186255e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 5 Nonlinear |R| = [32m1.322609e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 6 Nonlinear |R| = [32m3.598271e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 7 Nonlinear |R| = [32m3.098953e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 55
+ 8 Nonlinear |R| = [32m2.924060e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.400000e-01 |  -9.270483e+02 |
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
++----------------+----------------+
+
+
+Time Step 39, time = 0.355517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.748018e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 1 Nonlinear |R| = [31m9.831114e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [32m5.629822e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 3 Nonlinear |R| = [32m3.986557e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 4 Nonlinear |R| = [32m5.219870e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 5 Nonlinear |R| = [31m7.179442e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 6 Nonlinear |R| = [32m9.112756e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 7 Nonlinear |R| = [32m2.112397e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 8 Nonlinear |R| = [32m2.007468e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 56
+ 9 Nonlinear |R| = [32m2.149536e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 9
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.540233e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.500000e-01 |  -9.313478e+02 |
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
++----------------+----------------+
+
+
+Time Step 40, time = 0.365517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.782831e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 1 Nonlinear |R| = [31m1.167547e+02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m1.292105e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 3 Nonlinear |R| = [32m1.457346e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ 4 Nonlinear |R| = [32m7.892601e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 5 Nonlinear |R| = [32m1.782323e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 38
+ 6 Nonlinear |R| = [32m2.956973e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 7 Nonlinear |R| = [32m7.371395e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 47
+ 8 Nonlinear |R| = [32m6.752505e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 8
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m5.280146e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.600000e-01 |  -9.327851e+02 |
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
++----------------+----------------+
+
+
+Time Step 41, time = 0.375517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.772458e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 1 Nonlinear |R| = [31m8.804576e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m7.675118e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 3 Nonlinear |R| = [32m1.000226e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 4 Nonlinear |R| = [32m1.341759e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 38
+ 5 Nonlinear |R| = [31m2.286720e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 6 Nonlinear |R| = [32m7.548621e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 7 Nonlinear |R| = [32m7.300576e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 59
+ 8 Nonlinear |R| = [32m1.373548e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.073933e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.670000e-01 |  -9.320894e+02 |
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
++----------------+----------------+
+
+
+Time Step 42, time = 0.385517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.759599e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 35
+ 1 Nonlinear |R| = [31m4.807789e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 2 Nonlinear |R| = [32m7.125870e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 3 Nonlinear |R| = [32m3.328590e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 4 Nonlinear |R| = [31m4.141115e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 5 Nonlinear |R| = [32m3.079224e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 37
+ 6 Nonlinear |R| = [32m2.949330e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 57
+ 7 Nonlinear |R| = [32m3.076457e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m2.243165e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.740000e-01 |  -9.298029e+02 |
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
++----------------+----------------+
+
+
+Time Step 43, time = 0.395517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.694395e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 35
+ 1 Nonlinear |R| = [31m8.891716e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m5.539890e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 3 Nonlinear |R| = [32m4.859434e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 35
+ 4 Nonlinear |R| = [32m1.115241e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 38
+ 5 Nonlinear |R| = [32m1.580845e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 39
+ 6 Nonlinear |R| = [32m1.087409e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 7 Nonlinear |R| = [32m1.039806e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 54
+ 8 Nonlinear |R| = [32m1.615740e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 8
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.144790e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.803700e-01 |  -9.261321e+02 |
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
++----------------+----------------+
+
+
+Time Step 44, time = 0.405517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.664860e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 37
+ 1 Nonlinear |R| = [31m9.469414e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m4.534442e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 3 Nonlinear |R| = [32m7.768867e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 4 Nonlinear |R| = [32m1.792529e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 5 Nonlinear |R| = [31m1.322561e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 6 Nonlinear |R| = [32m6.403571e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ 7 Nonlinear |R| = [31m2.379444e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 8 Nonlinear |R| = [32m2.105147e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 30
+ 9 Nonlinear |R| = [32m1.820939e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 55
+10 Nonlinear |R| = [32m2.122086e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 10
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.848290e-01 |  -9.227536e+02 |
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
++----------------+----------------+
+
+
+Time Step 45, time = 0.415517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.609283e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 1 Nonlinear |R| = [32m2.832968e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [32m6.677205e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 3 Nonlinear |R| = [32m1.647646e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 4 Nonlinear |R| = [32m2.115839e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 5 Nonlinear |R| = [32m1.373792e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 6 Nonlinear |R| = [32m1.576112e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 55
+ 7 Nonlinear |R| = [32m1.518713e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.175175e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.892880e-01 |  -9.187373e+02 |
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
++----------------+----------------+
+
+
+Time Step 46, time = 0.425517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.691213e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 1 Nonlinear |R| = [32m1.976843e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 2 Nonlinear |R| = [32m2.789316e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 3 Nonlinear |R| = [32m1.145402e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 4 Nonlinear |R| = [32m2.725070e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 5 Nonlinear |R| = [32m1.617791e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 6 Nonlinear |R| = [32m1.422535e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 47
+ 7 Nonlinear |R| = [32m1.391352e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.173398e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   2.950847e-01 |  -9.126158e+02 |
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
++----------------+----------------+
+
+
+Time Step 47, time = 0.435517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.707917e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 1 Nonlinear |R| = [32m2.340114e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 2 Nonlinear |R| = [32m2.637272e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 3 Nonlinear |R| = [32m4.155877e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 4 Nonlinear |R| = [32m1.446594e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ 5 Nonlinear |R| = [31m8.408943e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 6 Nonlinear |R| = [32m1.015512e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 7 Nonlinear |R| = [32m1.875604e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ 8 Nonlinear |R| = [32m3.278021e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 9 Nonlinear |R| = [32m3.460530e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 9
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m2.748581e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.026204e-01 |  -9.032697e+02 |
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
++----------------+----------------+
+
+
+Time Step 48, time = 0.445517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.614565e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 1 Nonlinear |R| = [32m1.047886e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 2 Nonlinear |R| = [32m1.377174e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 3 Nonlinear |R| = [32m9.421488e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 4 Nonlinear |R| = [32m5.500741e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 5 Nonlinear |R| = [32m4.708723e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 6 Nonlinear |R| = [32m3.973602e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 49
+ 7 Nonlinear |R| = [32m1.414767e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.095330e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.124168e-01 |  -8.887342e+02 |
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
++----------------+----------------+
+
+
+Time Step 49, time = 0.455517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.525333e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 1 Nonlinear |R| = [32m3.227670e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m3.144958e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 3 Nonlinear |R| = [32m8.790490e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 4 Nonlinear |R| = [32m1.013648e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 5 Nonlinear |R| = [32m2.204746e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 6 Nonlinear |R| = [32m2.167205e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 7 Nonlinear |R| = [32m2.083247e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.848692e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.194168e-01 |  -8.769166e+02 |
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
++----------------+----------------+
+
+
+Time Step 50, time = 0.465517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.351199e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 1 Nonlinear |R| = [32m1.139872e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 2 Nonlinear |R| = [32m2.600802e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 3 Nonlinear |R| = [32m1.432324e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 4 Nonlinear |R| = [32m6.697395e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 5 Nonlinear |R| = [32m8.432291e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 45
+ 6 Nonlinear |R| = [32m7.440149e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m5.307964e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.264168e-01 |  -8.640352e+02 |
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
++----------------+----------------+
+
+
+Time Step 51, time = 0.475517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.901032e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 1 Nonlinear |R| = [32m2.655967e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 11
+ 2 Nonlinear |R| = [32m1.933205e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 3 Nonlinear |R| = [32m2.207397e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 4 Nonlinear |R| = [32m3.321632e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 5 Nonlinear |R| = [32m3.297500e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 6 Nonlinear |R| = [32m3.241455e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m2.592125e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.355168e-01 |  -8.459081e+02 |
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
++----------------+----------------+
+
+
+Time Step 52, time = 0.485517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.835498e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 1 Nonlinear |R| = [32m9.895335e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m1.205799e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 3 Nonlinear |R| = [32m8.471199e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 4 Nonlinear |R| = [32m2.575810e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 5 Nonlinear |R| = [32m2.600878e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 48
+ 6 Nonlinear |R| = [32m2.487377e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m2.188831e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.455168e-01 |  -8.246064e+02 |
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
++----------------+----------------+
+
+
+Time Step 53, time = 0.495517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.757563e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [32m6.506784e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 2 Nonlinear |R| = [32m1.454060e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 3 Nonlinear |R| = [32m1.606139e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 4 Nonlinear |R| = [32m8.268020e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 5 Nonlinear |R| = [32m1.369059e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 6 Nonlinear |R| = [32m1.222579e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 7 Nonlinear |R| = [32m1.113356e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m7.887265e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.555168e-01 |  -8.022330e+02 |
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
++----------------+----------------+
+
+
+Time Step 54, time = 0.505517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.106531e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 1 Nonlinear |R| = [32m1.776886e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m9.367436e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 3 Nonlinear |R| = [32m2.706582e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 4 Nonlinear |R| = [32m4.201460e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 5 Nonlinear |R| = [32m1.343251e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ 6 Nonlinear |R| = [32m1.232716e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m9.209034e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.655168e-01 |  -7.790799e+02 |
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
++----------------+----------------+
+
+
+Time Step 55, time = 0.515517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.841383e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [32m1.543868e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m1.618344e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 3 Nonlinear |R| = [32m2.394337e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 4 Nonlinear |R| = [32m4.371464e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 5 Nonlinear |R| = [32m1.031301e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 30
+ 6 Nonlinear |R| = [32m8.512514e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 47
+ 7 Nonlinear |R| = [32m1.840181e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.408661e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.755168e-01 |  -7.555183e+02 |
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
++----------------+----------------+
+
+
+Time Step 56, time = 0.525517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.645691e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 1 Nonlinear |R| = [31m3.297652e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 2 Nonlinear |R| = [32m1.067768e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 3 Nonlinear |R| = [32m3.796017e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 4 Nonlinear |R| = [32m1.167413e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 5 Nonlinear |R| = [32m5.766532e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 6 Nonlinear |R| = [32m1.242944e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 7 Nonlinear |R| = [32m3.960047e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 8 Nonlinear |R| = [32m3.621617e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ 9 Nonlinear |R| = [32m1.756728e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 9
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.424806e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.855168e-01 |  -7.317996e+02 |
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
++----------------+----------------+
+
+
+Time Step 57, time = 0.535517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.534660e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 1 Nonlinear |R| = [31m3.294217e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m3.649100e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 3 Nonlinear |R| = [32m1.325750e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 4 Nonlinear |R| = [32m6.215770e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 5 Nonlinear |R| = [32m1.576388e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 30
+ 6 Nonlinear |R| = [32m8.826503e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 7 Nonlinear |R| = [32m6.478043e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 8 Nonlinear |R| = [32m5.624161e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 9 Nonlinear |R| = [32m5.809863e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+10 Nonlinear |R| = [32m5.317563e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 10
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m4.568633e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   3.955168e-01 |  -7.080631e+02 |
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
++----------------+----------------+
+
+
+Time Step 58, time = 0.545517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.470549e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 1 Nonlinear |R| = [31m3.056602e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 2 Nonlinear |R| = [32m2.617102e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 3 Nonlinear |R| = [32m4.602022e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 4 Nonlinear |R| = [32m5.497163e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 5 Nonlinear |R| = [32m1.276211e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ 6 Nonlinear |R| = [32m1.245041e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m9.863527e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   4.055168e-01 |  -6.845450e+02 |
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
++----------------+----------------+
+
+
+Time Step 59, time = 0.555517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.962994e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 1 Nonlinear |R| = [32m1.301670e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 11
+ 2 Nonlinear |R| = [32m1.092903e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 3 Nonlinear |R| = [32m1.340766e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 4 Nonlinear |R| = [31m2.000216e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 11
+ 5 Nonlinear |R| = [32m8.214020e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 6 Nonlinear |R| = [32m7.792044e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 7 Nonlinear |R| = [32m7.539690e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   4.155168e-01 |  -6.614265e+02 |
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
++----------------+----------------+
+
+
+Time Step 60, time = 0.565517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.152170e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 1 Nonlinear |R| = [32m9.566901e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 2 Nonlinear |R| = [32m1.091428e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 3 Nonlinear |R| = [32m3.497440e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 4 Nonlinear |R| = [32m3.915941e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 5 Nonlinear |R| = [32m2.527344e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 6 Nonlinear |R| = [32m2.146519e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 47
+ 7 Nonlinear |R| = [32m2.743261e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m2.010145e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   4.255168e-01 |  -6.388592e+02 |
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
++----------------+----------------+
+
+
+Time Step 61, time = 0.575517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.701210e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 1 Nonlinear |R| = [32m6.105283e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m8.817487e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 3 Nonlinear |R| = [32m9.461144e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 4 Nonlinear |R| = [32m1.761544e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 5 Nonlinear |R| = [32m1.757288e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 37
+ 6 Nonlinear |R| = [32m1.714633e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.491656e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   4.355168e-01 |  -6.169417e+02 |
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
++----------------+----------------+
+
+
+Time Step 62, time = 0.585517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.849883e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 1 Nonlinear |R| = [32m1.157252e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m1.117618e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 3 Nonlinear |R| = [32m4.585913e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 4 Nonlinear |R| = [32m4.014478e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 5 Nonlinear |R| = [32m1.822400e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 6 Nonlinear |R| = [32m1.724942e-07[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.318911e-07[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   4.455168e-01 |  -5.957291e+02 |
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
++----------------+----------------+
+
+
+Time Step 63, time = 0.595517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.372427e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 1 Nonlinear |R| = [31m1.719213e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 2 Nonlinear |R| = [32m1.768678e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 3 Nonlinear |R| = [32m3.183662e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 4 Nonlinear |R| = [32m1.852854e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 11
+ 5 Nonlinear |R| = [32m2.433614e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 38
+ 6 Nonlinear |R| = [32m2.171272e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 44
+ 7 Nonlinear |R| = [32m1.980099e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.656632e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   4.555168e-01 |  -5.752826e+02 |
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
++----------------+----------------+
+
+Outputting exodus   [[33m  1.48 s[39m]
+
+Time Step 64, time = 0.605517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.725239e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 1 Nonlinear |R| = [32m8.851091e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m3.309308e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 3 Nonlinear |R| = [32m1.203202e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 4 Nonlinear |R| = [32m1.172567e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 5 Nonlinear |R| = [32m1.098818e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m8.477646e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   4.655168e-01 |  -5.555842e+02 |
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
++----------------+----------------+
+
+
+Time Step 65, time = 0.615517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m7.760788e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 1 Nonlinear |R| = [31m1.441630e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 2 Nonlinear |R| = [32m7.523360e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 3 Nonlinear |R| = [32m2.585946e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 4 Nonlinear |R| = [32m2.078302e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 5 Nonlinear |R| = [32m2.632770e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 6 Nonlinear |R| = [32m2.498663e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.815279e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   4.755168e-01 |  -5.367138e+02 |
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
++----------------+----------------+
+
+
+Time Step 66, time = 0.625517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.774040e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 1 Nonlinear |R| = [32m1.669226e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 2 Nonlinear |R| = [32m1.436703e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 3 Nonlinear |R| = [32m4.336933e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 4 Nonlinear |R| = [32m2.480395e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 5 Nonlinear |R| = [32m4.524895e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 6 Nonlinear |R| = [32m7.657170e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ 7 Nonlinear |R| = [32m7.568420e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m5.994603e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   4.855168e-01 |  -5.186056e+02 |
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
++----------------+----------------+
+
+
+Time Step 67, time = 0.635517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.459551e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 1 Nonlinear |R| = [32m1.145116e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m5.757661e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 3 Nonlinear |R| = [32m2.794987e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 4 Nonlinear |R| = [32m7.961280e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 38
+ 5 Nonlinear |R| = [32m7.541528e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 44
+ 6 Nonlinear |R| = [32m2.209582e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.843366e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   4.955168e-01 |  -5.012851e+02 |
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
++----------------+----------------+
+
+
+Time Step 68, time = 0.645517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.407147e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 1 Nonlinear |R| = [32m1.212925e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 2 Nonlinear |R| = [32m1.373631e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 3 Nonlinear |R| = [32m3.428565e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 4 Nonlinear |R| = [32m2.561864e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 5 Nonlinear |R| = [32m5.322059e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 6 Nonlinear |R| = [32m4.796003e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 7 Nonlinear |R| = [32m5.075336e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   5.055168e-01 |  -4.846560e+02 |
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
++----------------+----------------+
+
+
+Time Step 69, time = 0.655517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.542490e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 1 Nonlinear |R| = [31m1.849702e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m9.560287e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 3 Nonlinear |R| = [32m1.946297e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 4 Nonlinear |R| = [32m5.188662e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 5 Nonlinear |R| = [32m4.299094e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 46
+ 6 Nonlinear |R| = [32m4.292692e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   5.155168e-01 |  -4.687641e+02 |
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
++----------------+----------------+
+
+
+Time Step 70, time = 0.665517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m7.105533e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 1 Nonlinear |R| = [31m9.933738e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 8
+ 2 Nonlinear |R| = [32m4.842058e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 3 Nonlinear |R| = [32m1.284291e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 4 Nonlinear |R| = [32m1.031493e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 5 Nonlinear |R| = [32m1.076592e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 38
+ 6 Nonlinear |R| = [32m9.623100e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m7.045143e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   5.255168e-01 |  -4.535714e+02 |
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
++----------------+----------------+
+
+
+Time Step 71, time = 0.675517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m9.983722e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [32m2.775311e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m1.127206e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 3 Nonlinear |R| = [32m4.166055e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 4 Nonlinear |R| = [32m1.474577e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 5 Nonlinear |R| = [32m1.399563e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.007403e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   5.355168e-01 |  -4.389819e+02 |
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
++----------------+----------------+
+
+
+Time Step 72, time = 0.685517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.292923e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 1 Nonlinear |R| = [32m2.717638e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 10
+ 2 Nonlinear |R| = [32m1.832958e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 30
+ 3 Nonlinear |R| = [32m8.925910e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 37
+ 4 Nonlinear |R| = [32m8.315012e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 4
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m6.587113e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   5.455168e-01 |  -4.250150e+02 |
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
++----------------+----------------+
+
+
+Time Step 73, time = 0.695517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m9.031465e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 1 Nonlinear |R| = [32m1.888169e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m1.465430e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 3 Nonlinear |R| = [32m1.042041e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 4 Nonlinear |R| = [32m2.628061e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 5 Nonlinear |R| = [32m2.428515e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 6 Nonlinear |R| = [32m2.425303e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.058094e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   5.555168e-01 |  -4.117193e+02 |
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
++----------------+----------------+
+
+
+Time Step 74, time = 0.705517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.509691e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [32m4.967703e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m6.408179e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 3 Nonlinear |R| = [32m1.072203e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 4 Nonlinear |R| = [32m6.781419e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 26
+ 5 Nonlinear |R| = [32m5.895232e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 44
+ 6 Nonlinear |R| = [32m2.481311e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.086178e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   5.655168e-01 |  -3.988413e+02 |
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
++----------------+----------------+
+
+
+Time Step 75, time = 0.715517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m5.157692e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 1 Nonlinear |R| = [31m5.302248e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 2 Nonlinear |R| = [32m2.361034e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 3 Nonlinear |R| = [32m2.685978e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 4 Nonlinear |R| = [32m1.568016e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 5 Nonlinear |R| = [32m1.371554e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ 6 Nonlinear |R| = [32m2.392483e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.028338e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   5.755168e-01 |  -3.865779e+02 |
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
++----------------+----------------+
+
+
+Time Step 76, time = 0.725517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.678427e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 25
+ 1 Nonlinear |R| = [32m2.642819e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 2 Nonlinear |R| = [32m4.211179e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 3 Nonlinear |R| = [32m5.609183e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 28
+ 4 Nonlinear |R| = [32m5.576625e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 5 Nonlinear |R| = [32m2.449534e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.046583e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   5.855168e-01 |  -3.748123e+02 |
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
++----------------+----------------+
+
+
+Time Step 77, time = 0.735517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.110495e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 1 Nonlinear |R| = [32m6.319017e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 2 Nonlinear |R| = [32m1.245229e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 3 Nonlinear |R| = [32m1.349943e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 4 Nonlinear |R| = [32m1.010946e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 5 Nonlinear |R| = [32m1.386055e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 6 Nonlinear |R| = [31m2.482069e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 7
+ 7 Nonlinear |R| = [32m2.137502e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 36
+ 8 Nonlinear |R| = [32m2.143275e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 8
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.768381e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   5.955168e-01 |  -3.635284e+02 |
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
++----------------+----------------+
+
+
+Time Step 78, time = 0.745517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.316527e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 1 Nonlinear |R| = [32m1.864740e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 2 Nonlinear |R| = [32m1.191360e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 3 Nonlinear |R| = [32m3.658735e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 4 Nonlinear |R| = [32m3.354607e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ 5 Nonlinear |R| = [32m3.114924e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m2.314298e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   6.055168e-01 |  -3.526451e+02 |
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
++----------------+----------------+
+
+
+Time Step 79, time = 0.755517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m4.200818e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [32m2.397509e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 2 Nonlinear |R| = [32m6.132762e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 3 Nonlinear |R| = [32m5.798637e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 35
+ 4 Nonlinear |R| = [32m4.784678e-08[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 44
+ 5 Nonlinear |R| = [32m2.628987e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.208994e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   6.155168e-01 |  -3.424052e+02 |
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
++----------------+----------------+
+
+
+Time Step 80, time = 0.765517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.664831e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 1 Nonlinear |R| = [32m6.382617e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m7.435138e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 3 Nonlinear |R| = [32m6.844437e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 4 Nonlinear |R| = [32m6.305227e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 39
+ 5 Nonlinear |R| = [32m5.742220e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 5
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   6.255168e-01 |  -3.325043e+02 |
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
++----------------+----------------+
+
+
+Time Step 81, time = 0.775517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m7.867059e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 1 Nonlinear |R| = [32m1.655805e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m1.751854e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 3 Nonlinear |R| = [32m1.057751e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 4 Nonlinear |R| = [32m1.796403e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 5 Nonlinear |R| = [32m1.580794e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.327191e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   6.355168e-01 |  -3.229007e+02 |
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
++----------------+----------------+
+
+
+Time Step 82, time = 0.785517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.475597e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 1 Nonlinear |R| = [32m6.309566e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m7.681727e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 3 Nonlinear |R| = [32m9.134611e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 37
+ 4 Nonlinear |R| = [32m7.928162e-08[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 5 Nonlinear |R| = [32m2.639144e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.204112e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   6.455168e-01 |  -3.137509e+02 |
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
++----------------+----------------+
+
+
+Time Step 83, time = 0.795517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.160467e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 1 Nonlinear |R| = [32m2.228929e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [32m1.092208e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 3 Nonlinear |R| = [32m9.851051e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 4 Nonlinear |R| = [32m9.956040e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m8.195139e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   6.555168e-01 |  -3.048181e+02 |
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
++----------------+----------------+
+
+
+Time Step 84, time = 0.805517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.944254e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 1 Nonlinear |R| = [32m5.226399e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m1.812762e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 3 Nonlinear |R| = [32m2.273097e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 4 Nonlinear |R| = [32m1.891888e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 4
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.435932e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   6.655168e-01 |  -2.962799e+02 |
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
++----------------+----------------+
+
+
+Time Step 85, time = 0.815517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.812623e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 1 Nonlinear |R| = [32m2.539447e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 2 Nonlinear |R| = [32m2.056513e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 3 Nonlinear |R| = [32m2.145721e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ 4 Nonlinear |R| = [32m1.976049e-08[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ 5 Nonlinear |R| = [32m2.631108e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.211676e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   6.755168e-01 |  -2.881946e+02 |
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
++----------------+----------------+
+
+
+Time Step 86, time = 0.825517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.036596e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 1 Nonlinear |R| = [32m1.122419e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 2 Nonlinear |R| = [32m1.684390e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 3 Nonlinear |R| = [32m7.979152e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 4 Nonlinear |R| = [32m7.598106e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 5 Nonlinear |R| = [32m7.015493e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m5.030228e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   6.855168e-01 |  -2.804481e+02 |
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
++----------------+----------------+
+
+
+Time Step 87, time = 0.835517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m6.005820e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 1 Nonlinear |R| = [32m1.070625e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 2 Nonlinear |R| = [32m9.487930e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 3 Nonlinear |R| = [32m2.399495e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 4 Nonlinear |R| = [32m2.258164e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ 5 Nonlinear |R| = [32m3.319688e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.619784e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   6.955168e-01 |  -2.730375e+02 |
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
++----------------+----------------+
+
+
+Time Step 88, time = 0.845517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m5.742633e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 1 Nonlinear |R| = [32m5.007352e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 8
+ 2 Nonlinear |R| = [32m1.546257e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 3 Nonlinear |R| = [31m2.451151e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 8
+ 4 Nonlinear |R| = [32m1.813974e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 5 Nonlinear |R| = [32m2.056885e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 6 Nonlinear |R| = [32m1.707897e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ 7 Nonlinear |R| = [32m3.267918e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.627365e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   7.055168e-01 |  -2.657056e+02 |
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
++----------------+----------------+
+
+
+Time Step 89, time = 0.855517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.202094e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 1 Nonlinear |R| = [32m1.702561e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 2 Nonlinear |R| = [32m1.356367e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 3 Nonlinear |R| = [32m1.391216e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 4 Nonlinear |R| = [32m1.382720e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 44
+ 5 Nonlinear |R| = [32m2.827401e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.399662e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   7.155168e-01 |  -2.587067e+02 |
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
++----------------+----------------+
+
+
+Time Step 90, time = 0.865517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.089075e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 1 Nonlinear |R| = [31m3.541215e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 2 Nonlinear |R| = [32m1.621945e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 3 Nonlinear |R| = [32m4.582575e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 37
+ 4 Nonlinear |R| = [32m3.892964e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ 5 Nonlinear |R| = [32m2.885464e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.460577e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   7.255168e-01 |  -2.520970e+02 |
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
++----------------+----------------+
+
+
+Time Step 91, time = 0.875517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m4.723139e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 1 Nonlinear |R| = [32m1.729810e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 12
+ 2 Nonlinear |R| = [32m4.597029e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 3 Nonlinear |R| = [32m7.621936e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 29
+ 4 Nonlinear |R| = [32m6.985361e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ 5 Nonlinear |R| = [32m3.020916e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.529639e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   7.355168e-01 |  -2.457607e+02 |
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
++----------------+----------------+
+
+
+Time Step 92, time = 0.885517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m9.430631e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 15
+ 1 Nonlinear |R| = [32m3.002256e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 2 Nonlinear |R| = [32m1.743440e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 3 Nonlinear |R| = [32m1.658095e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 39
+ 4 Nonlinear |R| = [32m1.530647e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 4
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m1.084608e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   7.455168e-01 |  -2.396445e+02 |
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
++----------------+----------------+
+
+
+Time Step 93, time = 0.895517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.329569e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 1 Nonlinear |R| = [32m9.234497e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m1.848265e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 3 Nonlinear |R| = [32m1.458389e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 4 Nonlinear |R| = [32m8.231079e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 33
+ 5 Nonlinear |R| = [32m7.369665e-08[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ 6 Nonlinear |R| = [32m2.981854e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.503734e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   7.555168e-01 |  -2.338008e+02 |
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
++----------------+----------------+
+
+
+Time Step 94, time = 0.905517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.544864e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 1 Nonlinear |R| = [32m2.164526e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 2 Nonlinear |R| = [32m9.096792e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 35
+ 3 Nonlinear |R| = [32m8.073950e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 4 Nonlinear |R| = [32m2.998333e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.468353e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   7.655168e-01 |  -2.278815e+02 |
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
+|   9.055168e-01 |  -1.678283e+02 |
++----------------+----------------+
+
+
+Time Step 95, time = 0.915517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.362282e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 1 Nonlinear |R| = [32m1.583390e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 9
+ 2 Nonlinear |R| = [32m2.152252e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 3 Nonlinear |R| = [32m1.654607e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 18
+ 4 Nonlinear |R| = [32m1.930526e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 44
+ 5 Nonlinear |R| = [32m1.791598e-08[39m
+Nonlinear solve converged due to CONVERGED_FNORM_RELATIVE iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m1.489163e-08[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   7.755168e-01 |  -2.221870e+02 |
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
+|   9.055168e-01 |  -1.678283e+02 |
+|   9.155168e-01 |  -1.647352e+02 |
++----------------+----------------+
+
+
+Time Step 96, time = 0.925517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m3.998526e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 1 Nonlinear |R| = [32m1.160117e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 13
+ 2 Nonlinear |R| = [32m1.067318e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 3 Nonlinear |R| = [32m4.807305e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 4 Nonlinear |R| = [32m4.175530e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 45
+ 5 Nonlinear |R| = [32m3.085373e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.578261e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   7.855168e-01 |  -2.167812e+02 |
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
+|   9.055168e-01 |  -1.678283e+02 |
+|   9.155168e-01 |  -1.647352e+02 |
+|   9.255168e-01 |  -1.617526e+02 |
++----------------+----------------+
+
+
+Time Step 97, time = 0.935517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.372598e+01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 19
+ 1 Nonlinear |R| = [32m4.678305e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 14
+ 2 Nonlinear |R| = [32m2.995077e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 17
+ 3 Nonlinear |R| = [32m8.314119e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 4 Nonlinear |R| = [32m7.229629e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 41
+ 5 Nonlinear |R| = [32m7.176780e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_x: [33m5.300644e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   7.955168e-01 |  -2.116518e+02 |
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
+|   9.055168e-01 |  -1.678283e+02 |
+|   9.155168e-01 |  -1.647352e+02 |
+|   9.255168e-01 |  -1.617526e+02 |
+|   9.355168e-01 |  -1.587207e+02 |
++----------------+----------------+
+
+
+Time Step 98, time = 0.945517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.072204e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 1 Nonlinear |R| = [32m1.456483e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 2 Nonlinear |R| = [32m9.619266e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 32
+ 3 Nonlinear |R| = [32m9.559624e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 44
+ 4 Nonlinear |R| = [32m3.198768e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.667221e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   8.055168e-01 |  -2.068144e+02 |
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
+|   9.055168e-01 |  -1.678283e+02 |
+|   9.155168e-01 |  -1.647352e+02 |
+|   9.255168e-01 |  -1.617526e+02 |
+|   9.355168e-01 |  -1.587207e+02 |
+|   9.455168e-01 |  -1.557955e+02 |
++----------------+----------------+
+
+
+Time Step 99, time = 0.955517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.816922e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [32m2.089179e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 16
+ 2 Nonlinear |R| = [32m8.317863e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 27
+ 3 Nonlinear |R| = [32m7.711817e-06[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ 4 Nonlinear |R| = [32m7.918077e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+[32m Solve Converged![39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   8.155168e-01 |  -2.022700e+02 |
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
+|   9.055168e-01 |  -1.678283e+02 |
+|   9.155168e-01 |  -1.647352e+02 |
+|   9.255168e-01 |  -1.617526e+02 |
+|   9.355168e-01 |  -1.587207e+02 |
+|   9.455168e-01 |  -1.557955e+02 |
+|   9.555168e-01 |  -1.529936e+02 |
++----------------+----------------+
+
+
+Time Step 100, time = 0.965517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.866578e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 1 Nonlinear |R| = [32m1.060362e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 2 Nonlinear |R| = [32m1.995911e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ 3 Nonlinear |R| = [32m1.786133e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 4 Nonlinear |R| = [32m3.112269e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.604654e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   8.255168e-01 |  -1.978766e+02 |
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
+|   9.055168e-01 |  -1.678283e+02 |
+|   9.155168e-01 |  -1.647352e+02 |
+|   9.255168e-01 |  -1.617526e+02 |
+|   9.355168e-01 |  -1.587207e+02 |
+|   9.455168e-01 |  -1.557955e+02 |
+|   9.555168e-01 |  -1.529936e+02 |
+|   9.655168e-01 |  -1.503050e+02 |
++----------------+----------------+
+
+
+Time Step 101, time = 0.975517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.156080e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 1 Nonlinear |R| = [32m1.047268e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 21
+ 2 Nonlinear |R| = [32m1.060940e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 42
+ 3 Nonlinear |R| = [32m1.057237e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 43
+ 4 Nonlinear |R| = [32m3.207694e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.704946e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   8.355168e-01 |  -1.936541e+02 |
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
+|   9.055168e-01 |  -1.678283e+02 |
+|   9.155168e-01 |  -1.647352e+02 |
+|   9.255168e-01 |  -1.617526e+02 |
+|   9.355168e-01 |  -1.587207e+02 |
+|   9.455168e-01 |  -1.557955e+02 |
+|   9.555168e-01 |  -1.529936e+02 |
+|   9.655168e-01 |  -1.503050e+02 |
+|   9.755168e-01 |  -1.477194e+02 |
++----------------+----------------+
+
+
+Time Step 102, time = 0.985517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.687140e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 20
+ 1 Nonlinear |R| = [32m8.467107e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 22
+ 2 Nonlinear |R| = [32m5.091581e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 30
+ 3 Nonlinear |R| = [32m7.259964e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 4 Nonlinear |R| = [32m7.254960e-08[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 44
+ 5 Nonlinear |R| = [32m3.328107e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.815655e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   8.455168e-01 |  -1.896049e+02 |
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
+|   9.055168e-01 |  -1.678283e+02 |
+|   9.155168e-01 |  -1.647352e+02 |
+|   9.255168e-01 |  -1.617526e+02 |
+|   9.355168e-01 |  -1.587207e+02 |
+|   9.455168e-01 |  -1.557955e+02 |
+|   9.555168e-01 |  -1.529936e+02 |
+|   9.655168e-01 |  -1.503050e+02 |
+|   9.755168e-01 |  -1.477194e+02 |
+|   9.855168e-01 |  -1.452356e+02 |
++----------------+----------------+
+
+
+Time Step 103, time = 0.995517, dt = 0.01
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m1.283587e+00[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 23
+ 1 Nonlinear |R| = [32m5.309078e-02[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 2 Nonlinear |R| = [32m1.582074e-04[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ 3 Nonlinear |R| = [32m3.595879e-07[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 40
+ 4 Nonlinear |R| = [32m3.315482e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m2.850354e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   8.555168e-01 |  -1.856023e+02 |
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
+|   9.055168e-01 |  -1.678283e+02 |
+|   9.155168e-01 |  -1.647352e+02 |
+|   9.255168e-01 |  -1.617526e+02 |
+|   9.355168e-01 |  -1.587207e+02 |
+|   9.455168e-01 |  -1.557955e+02 |
+|   9.555168e-01 |  -1.529936e+02 |
+|   9.655168e-01 |  -1.503050e+02 |
+|   9.755168e-01 |  -1.477194e+02 |
+|   9.855168e-01 |  -1.452356e+02 |
+|   9.955168e-01 |  -1.428571e+02 |
++----------------+----------------+
+
+
+Time Step 104, time = 1, dt = 0.00448317
+  Applying predictor with scale factor = 1
+ 0 Nonlinear |R| = [32m2.786641e-01[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 24
+ 1 Nonlinear |R| = [32m1.648415e-03[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 31
+ 2 Nonlinear |R| = [32m1.035776e-05[39m
+  Linear solve converged due to CONVERGED_RTOL iterations 34
+ 3 Nonlinear |R| = [32m9.413764e-09[39m
+Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+[32m Solve Converged![39m
+
+Outlier Variable Residual Norms:
+  disp_y: [33m7.097498e-09[39m
+
+Postprocessor Values:
++----------------+----------------+
+| time           | bot_react_y    |
++----------------+----------------+
+:                :                :
+|   8.655168e-01 |  -1.817833e+02 |
+|   8.755168e-01 |  -1.780946e+02 |
+|   8.855168e-01 |  -1.744951e+02 |
+|   8.955168e-01 |  -1.710732e+02 |
+|   9.055168e-01 |  -1.678283e+02 |
+|   9.155168e-01 |  -1.647352e+02 |
+|   9.255168e-01 |  -1.617526e+02 |
+|   9.355168e-01 |  -1.587207e+02 |
+|   9.455168e-01 |  -1.557955e+02 |
+|   9.555168e-01 |  -1.529936e+02 |
+|   9.655168e-01 |  -1.503050e+02 |
+|   9.755168e-01 |  -1.477194e+02 |
+|   9.855168e-01 |  -1.452356e+02 |
+|   9.955168e-01 |  -1.428571e+02 |
+|   1.000000e+00 |  -1.418221e+02 |
++----------------+----------------+
+
+
+Performance Graph:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+|                  Section                  | Calls |   Self(s)  |   Avg(s)   |    %   | Children(s) |   Avg(s)   |    %   |  Total(s)  |   Avg(s)   |    %   |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+| ChamoisTestApp (main)                     |     1 |      0.007 |      0.007 |   0.00 |    1119.076 |   1119.076 | 100.00 |   1119.083 |   1119.083 | 100.00 |
+|   FEProblem::outputStep                   |   105 |      0.074 |      0.001 |   0.01 |      18.408 |      0.175 |   1.64 |     18.482 |      0.176 |   1.65 |
+|   Transient::PicardSolve                  |   108 |      0.212 |      0.002 |   0.02 |    1097.991 |     10.167 |  98.12 |   1098.204 |     10.169 |  98.13 |
+|     FEProblem::computeUserObjects         |   104 |      0.674 |      0.006 |   0.06 |       0.000 |      0.000 |   0.00 |      0.674 |      0.006 |   0.06 |
+|     FEProblem::solve                      |   108 |    619.011 |      5.732 |  55.31 |     470.902 |      4.360 |  42.08 |   1089.912 |     10.092 |  97.39 |
+|       FEProblem::computeResidualInternal  |   910 |      0.002 |      0.000 |   0.00 |     123.473 |      0.136 |  11.03 |    123.475 |      0.136 |  11.03 |
+|       FEProblem::computeJacobianInternal  |   694 |      0.002 |      0.000 |   0.00 |     347.289 |      0.500 |  31.03 |    347.291 |      0.500 |  31.03 |
+|     FEProblem::outputStep                 |   112 |      0.084 |      0.001 |   0.01 |       0.101 |      0.001 |   0.01 |      0.185 |      0.002 |   0.02 |
+|     AuxiliarySystem::computeElementalVars |   104 |      3.370 |      0.032 |   0.30 |       3.838 |      0.037 |   0.34 |      7.208 |      0.069 |   0.64 |
+|   Transient::final                        |     1 |      0.001 |      0.001 |   0.00 |       0.001 |      0.001 |   0.00 |      0.002 |      0.002 |   0.00 |
+|     FEProblem::outputStep                 |     1 |      0.000 |      0.000 |   0.00 |       0.001 |      0.001 |   0.00 |      0.001 |      0.001 |   0.00 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
