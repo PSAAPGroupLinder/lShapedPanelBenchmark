@@ -45,16 +45,19 @@ for color , (f, lab) in zip (colors_rankine, files_gradient_enhanced_rankine.ite
 
 
 # plot the efem results
-files_efem = {'./embedded_fem/efem.csv' : r'efem',}
+files_efem = {'./embedded_fem/efem_very_coarse_mesh.csv' : r'efem-coarse mesh',
+			  './embedded_fem/efem_coarse_mesh.csv' : r'efem-fine mesh',}
 
-for (f, lab) in files_efem.items():
+colors_efem = plt.cm.viridis(np.linspace(0.0, 0.6, 2 ))
+
+for color , (f, lab) in zip(colors_efem, files_efem.items()):
     
     data = np.loadtxt ( f, delimiter=' ', skiprows=0)
 
     U = data[:,0]
     RF = data[:,1]
 
-    ax.plot(U, RF, label=lab, c = 'r', linestyle = '--')
+    ax.plot(U, RF, label=lab, c = color, linestyle = '--')
 # end plot gradient_enhanced_rankine curves
 
 
