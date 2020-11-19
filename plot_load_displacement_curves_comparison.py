@@ -44,6 +44,20 @@ for color , (f, lab) in zip (colors_rankine, files_gradient_enhanced_rankine.ite
 # end plot gradient_enhanced_rankine curves
 
 
+# plot the efem results
+files_efem = {'./embedded_fem/efem.csv' : r'efem',}
+
+for (f, lab) in files_efem.items():
+    
+    data = np.loadtxt ( f, delimiter=' ', skiprows=0)
+
+    U = data[:,0]
+    RF = data[:,1]
+
+    ax.plot(U, RF, label=lab, c = 'r', linestyle = '--')
+# end plot gradient_enhanced_rankine curves
+
+
 
 # make plots readable
 ax.set_xlabel('displacement (mm)')
