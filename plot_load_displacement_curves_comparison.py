@@ -31,7 +31,7 @@ files_gradient_enhanced_rankine = {'./gradient_enhanced_rankine/rankine_epsf=2e-
                                    './gradient_enhanced_rankine/rankine_epsf=2e-3_ldam=4.csv' : r'ge rankine: $\epsilon_f=\num{2e-3}, l=\SI{4}{mm}$',
                                    './gradient_enhanced_rankine/rankine_epsf=4e-3_ldam=4.csv' : r'ge rankine: $\epsilon_f=\num{4e-3}, l=\SI{4}{mm}$',
                                    './gradient_enhanced_rankine/rankine_epsf=8e-3_ldam=4.csv' : r'ge rankine: $\epsilon_f=\num{8e-3}, l=\SI{4}{mm}$',}
-colors_rankine = plt.cm.viridis(np.linspace(0.0, .8, 6 ))
+colors_rankine = plt.cm.Blues_r(np.linspace(0.0, .8, 6 ))
 
 for color , (f, lab) in zip (colors_rankine, files_gradient_enhanced_rankine.items() ):
     
@@ -50,7 +50,7 @@ files_efem = {'./embedded_fem/efem_very_coarse_paper.csv' : r'efem-very-coarse-p
 	      './embedded_fem/efem_fine.csv' : r'efem-fine (Matthias mesh)',
 	      './embedded_fem/efem_coarse.csv' : r'efem-coarse (Matthias mesh)',}
 
-colors_efem = plt.cm.hsv(np.linspace(0.0, 0.6, 4 ))
+colors_efem = plt.cm.Reds_r(np.linspace(0.0, 0.6, 4 ))
 
 for color , (f, lab) in zip(colors_efem, files_efem.items()):
     
