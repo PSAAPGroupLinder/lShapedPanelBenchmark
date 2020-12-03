@@ -45,10 +45,12 @@ for color , (f, lab) in zip (colors_rankine, files_gradient_enhanced_rankine.ite
 
 
 # plot the efem results
-files_efem = {'./embedded_fem/efem_very_coarse_mesh.csv' : r'efem-coarse mesh',
-			  './embedded_fem/efem_coarse_mesh.csv' : r'efem-fine mesh',}
+files_efem = {'./embedded_fem/efem_very_coarse_paper.csv' : r'efem-very-coarse-paper',
+	      './embedded_fem/efem_coarse_paper.csv' : r'efem-coarse-paper',
+	      './embedded_fem/efem_fine.csv' : r'efem-fine (Matthias mesh)',
+	      './embedded_fem/efem_coarse.csv' : r'efem-coarse (Matthias mesh)',}
 
-colors_efem = plt.cm.viridis(np.linspace(0.0, 0.6, 2 ))
+colors_efem = plt.cm.hsv(np.linspace(0.0, 0.6, 4 ))
 
 for color , (f, lab) in zip(colors_efem, files_efem.items()):
     

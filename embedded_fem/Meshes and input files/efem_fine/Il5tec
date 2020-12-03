@@ -1,0 +1,187 @@
+para     ! element numbers
+ss=0.5265
+b0=5
+
+para
+be=333
+b1=189
+b2=23
+b3=366
+b4=29
+
+
+para
+r1=5
+r2=6
+
+feap ** 3d hex8 l shap by cubit layer 2013/01/13
+6976,3434,1,3,3,8
+
+print
+
+coor
+include nodes_mat1
+
+elem
+include elements_mat1
+
+boun ! disp boun 
+5 0  0  -1 0
+6 0  0 1 0
+
+disp
+5 0 0  1 0 
+6 0 0  1 0
+
+eboun
+2 0.0 1 1 1
+
+fprop
+5 0 0 1 0 
+6 0 0 1 0
+
+c**********************************************************************
+c               MATERIAL DEFINITION
+c**********************************************************************
+
+param, ELEMENT TYPE
+ie = 0          ! element type  = 0, T3, T6, Q4, Q8, Q9
+
+param, CONTINUUM MATERIAL MODEL
+ic = 0          !  = 0,    isotropic linear elastic continuum model
+
+param, CONTINUUM MATERIAL PROPERTIES (isotropic linear elastic material)
+e  = 25850.0     ! Young modulus
+nu = 0.18        ! Poisson ratio 
+
+param, CONTINUUM MATERIAL PROPERTIES (additional properties for plasticity models)
+ci = 0.02       ! Initial limit stress
+cs = 0.05       ! Saturation limit stress
+ce = 1.0        ! Saturation continuum hardening/softening exponent
+ch = 0.5        ! Linear continuum hardening/softening modulus
+cv = 0.0        ! Continuum viscosity 
+
+param, HINGE TYPE COMPATIBILITY ! = -1 if inactive, = 0 if constant, = 1 if linear
+cn  =  1        ! Normal crack opening
+cm  =  1        ! Tangential 1 slip
+cv  =  1        ! Tangential 2 slip
+cp  =  1	! Primary Hinge Type (=1 for normal, =2 for tangential)
+
+param, HINGE TYPE EQUILIBRIUM ! = -1 if inactive, = 0 if constant, = 1 if linear
+en  = 1         ! Ge operator in normal direction
+em  = 1         ! Ge operator in tangential direction 1
+ev  = 1         ! Ge operator in tangential direction 2
+
+param, HINGE LOCALIZED MODEL (=0 if inactive, =1 if linear, =2 if damage, =3 if vonMises(only in tangential direction))
+mn  = 2         ! model in normal direction 
+mm  = 1         ! model in tangential direction 1 !
+mv  = 1         ! model in tangential direction 2 !
+
+param, SPECIAL PROBLEMS
+se  = 0         !  stop disc at element
+ix  = 0.d0      !  prescribed angle 1 of disc
+iy  = 0.d0      !  prescribed angle 2 of disc
+iz  = 0.d0      !  prescribed angle 3 of disc
+ip  = 0         !  not needed in general
+
+param, STABILIZATION PARAMETER
+sp  = 0.d0       ! = 0 in general
+
+param, HINGE PROPERTIES (ELASTIC REGULARIZATION)
+kn  = 2.d+5     ! regularization stiffness for normal direction
+km  = 3.d0      ! regularization stiffness for tangential direction 1
+kv  = 3.d0      ! regularization stiffness for tangential direction 2
+
+param, HINGE PROPERTIES (DEFAULT ANGLE, TOLERANCE)
+ax  = 0.0        ! Default angle 1
+ay  = 0.0        ! Default angle 2
+az  = 0.0        ! Default angle 2
+to  = 1.001      ! Tolerance used for detection of von Mises plasticity
+
+param, HINGE PROPERTIES (LOCALIZED DAMAGE MODEL)
+yd =  2.70      ! tensile strength
+ys =  0.0       ! Saturation strength
+ex =  41.54       ! exponent
+hd =  0.0      ! Linear softening modulus
+vi =  0.0       ! Localized viscosity
+
+c -------------------------------------------
+c Isotropic linear elastic material (ic = 0)
+c -------------------------------------------
+
+   material
+   user,35
+   ie,
+   ic,
+   e,nu
+   cn,cm,cv,cp,en,em,ev,ip,se,ix,iy,iz,sp
+   mn,mm,mv
+   kn,km,kv
+   ax,ay,az,to
+   yd ys ex hd vi
+
+gra3
+be b1 -1 b2 1 
+b3 -1 b4 1 
+
+
+ind3
+be 0 0 0.0 0.0 0.0 b2 b1 ss b4 b3 ss
+
+
+end
+
+tie
+optimize
+
+batch
+loc3,,9
+end
+
+batch
+  prop,,1
+end
+  2,2
+  0.,0. 0.01, 0.01  
+  1.01,1.01
+
+batch
+tplot
+end
+reac,r1,2
+reac,r2,2
+
+batch
+  noprint
+  tol,,1.d-22
+  optimize
+  dt,,0.04
+    plot,tecp,1,35
+    plot,tecp,0,35
+    plot,upl3,100
+    plot,cart
+    plot,mesh
+    loop,,26
+      time
+      loop,,20
+        utang,,1
+      next
+      plot,hide
+      plot,stre,7  ! get node value
+      crk3d
+      plot wipe
+      plot mesh
+      plot,upl3,5
+      loc3
+      plot,upl3
+      plot,tecp,0,35    ! write data to tecp 
+      plot,upl3,101
+    next
+  plot,tecp,-1,35   ! closes the file
+  plot,upl3,102
+end
+
+inte
+stop
+
+
