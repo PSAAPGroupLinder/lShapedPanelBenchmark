@@ -63,6 +63,21 @@ for color , (f, lab) in zip(colors_efem, files_efem.items()):
 # end plot gradient_enhanced_rankine curves
 
 
+# plot phase field curves
+files_phase_field = {'./phase_field/fd_fine_linear.csv' : r'phase field: $l=\SI{7.5}{mm}$'}
+
+colors_phase_field = plt.cm.PuRd(np.linspace(0.6, 0.7, len(files_phase_field) ))
+
+for color , (f, lab) in zip(colors_phase_field, files_phase_field.items()):
+    
+    data = np.loadtxt ( f, delimiter=',', skiprows=1)
+
+    U = data[:,0] # time = displacement
+    RF = data[:,1]
+
+    ax.plot(U, RF, label=lab, c = color, linestyle = ':')
+# end plot phase_field curves
+
 
 # make plots readable
 ax.set_xlabel('displacement (mm)')
